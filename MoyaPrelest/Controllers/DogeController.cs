@@ -13,6 +13,12 @@ namespace MoyaPrelest.Controllers
     {
 
         [Route("")]
+        public IActionResult TitlePage()
+        {
+            ViewBag.Title = "Title page";
+            return View();
+        }
+
         public IActionResult List()
         {
             return View(Startup.dm.dogs);
