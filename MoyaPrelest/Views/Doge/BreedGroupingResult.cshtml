@@ -1,0 +1,15 @@
+﻿@using MoyaPrelest.Models;
+@model List<DogeModel>
+<table tablespacing="5" tablepading="5" border="3">
+    <tr>
+        <td>Кличка</td>
+        <td>Возраст</td>
+    </tr>
+    @foreach (DogeModel item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+        </tr>
+    }
+</table>  

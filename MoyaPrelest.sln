@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoyaPrelest", "MoyaPrelest\MoyaPrelest.csproj", "{59C51817-148E-4610-94D5-C09BE2914362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoyaPrelestTest", "MoyaPrelestTest\MoyaPrelestTest.csproj", "{0D10729E-0DAD-47B9-B47C-383244AFF1E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59C51817-148E-4610-94D5-C09BE2914362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C51817-148E-4610-94D5-C09BE2914362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C51817-148E-4610-94D5-C09BE2914362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C51817-148E-4610-94D5-C09BE2914362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D10729E-0DAD-47B9-B47C-383244AFF1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D10729E-0DAD-47B9-B47C-383244AFF1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D10729E-0DAD-47B9-B47C-383244AFF1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D10729E-0DAD-47B9-B47C-383244AFF1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4302687D-0764-47C6-A810-8EA811F4DFDB}
+	EndGlobalSection
+EndGlobal

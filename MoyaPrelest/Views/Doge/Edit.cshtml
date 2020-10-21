@@ -1,0 +1,39 @@
+﻿@using MoyaPrelest.Mocks;
+
+@{ string ifChosen(string n, string g)
+                {
+                    if (g == n)
+                        return "selected";
+                    else
+                        return "";
+                } }
+
+<form method="post">
+
+    <div>
+        <label for="Breed">Порода:</label> <br />
+        <input type="text" class="form-control" name="Breed" placeholder="Введите породу" autofocus required pattern="[А-Яа-я]{}" title="Только кириллица" value="@Model.Breed" /> <br />
+
+        <label for="Name">Кличка:</label> <br />
+        <input type="text" class="form-control" name="NewName" placeholder="Введите кличку" required pattern="[А-Яа-я]{}" title="Только кириллица" value="@Model.Name" /> <br />
+
+        <label for="Age">Возраст:</label> <br />
+        <input type="number" name="Age" min="1" max="30" value="@Model.Age" required>
+
+        <label for="Gender">Пол:</label> <br />
+        <select name="Gender" class="form-control" required>
+            <option disabled selected value="">Выберите пол</option>
+            <option value="Кобель" @ifChosen("Кобель", Model.Gender)>Кобель</option>
+            <option value="Сука"  @ifChosen("Сука", Model.Gender)>Сука</option>
+        </select> <br />
+
+
+        <label for="OwnersAddress">Адрес хозяина:</label> <br />
+        <input type="text" class="form-control" name="OwnersAddress" placeholder="Введите адрес хозяина" required pattern="[А-Яа-я][0-9]\s\w{}" title="Только буквы русского алфавита и знаки препинания" value="@Model.OwnersAddress" /> <br />
+
+
+        <input type="submit" value="Готово" />
+        <button type="reset" onclick="window.location.href='/'">Отмена</button>
+    </div>
+
+</form>

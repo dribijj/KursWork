@@ -1,0 +1,18 @@
+﻿@using MoyaPrelest
+@using MoyaPrelest.Mocks
+@using System.Web
+<!DOCTYPE html>
+
+<html>
+<body>
+    <div>
+        <button onclick="window.location.href='/Doge/BreedGrouping'">Выборка по породам</button>
+        <button onclick="window.location.href='/Doge/AverageAge'">Средний возраст по породе</button>
+        <button onclick="window.location.href='/Doge/AgeRanking'">Сортировка по возрасту</button>
+        <button onclick="window.location.href='/Diagram/BreedDiagramSelection'">График зависимости численности собак в зависимости от возраста</button>
+        <button onclick="window.location.href='/Diagram/GenderSelection'">Круговая диаграмма, иллюстрирующая возрастной состав по интересующему пользователя полу</button>
+        <button onclick="window.location.href='/Diagram/AllBreedDiagram'">Столбиковая диаграмма, характеризующая количество собак каждой породы</button>
+    </div>
+    @RenderBody()
+</body>
+</html>

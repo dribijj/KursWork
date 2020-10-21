@@ -1,0 +1,38 @@
+﻿@{ Layout = "_Layout"; }
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">google.charts.load('current', {
+        packages: ['corechart', 'bar']
+    });
+    google.charts.setOnLoadCallback(firstStep);
+
+    function firstStep() {
+        $.getJSON('/Diagram/BreedQuantityDiagram', secondStep);
+    }
+    function secondStep(data) {
+        var inChartData = new google.visualization.DataTable();
+        inChartData.addColumn('string', 'Labels');
+        inChartData.addColumn('number', 'Values');
+
+        for (var i = 0; i < (data.length/2); i++) {
+            inChartData.addRow([data[2 * i], data[2 * i + 1]]);
+        }
+
+        var options = {
+            title: 'Столбиковая диаграмма, характеризующая количество собак каждой породы',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('BreedDiagram'));
+
+        chart.draw(inChartData, options);
+
+        return false;
+    }</script>
+
+<body>
+    <div id="BreedDiagram" style="width: 900px; height: 500px"></div>
+</body>

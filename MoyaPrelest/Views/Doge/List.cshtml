@@ -1,0 +1,35 @@
+﻿@using MoyaPrelest.Models
+@model List<DogeModel>
+
+@{ 
+    Layout = "_Layout";
+}
+
+<div>
+    <button onclick="window.location.href='/Doge/Add'">Добавить</button>
+</div>
+<table tablespacing="5" tablepading="5" border="3">
+    <tr>
+        <td>Порода</td>
+        <td>Кличка</td>
+        <td>Возраст</td>
+        <td>Пол</td>
+        <td>Адрес Хозяина</td>
+    </tr>
+    @foreach (DogeModel item in Model)
+    {
+        <tr>
+            <td>@item.Breed</td>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+            <td>@item.Gender</td>
+            <td>@item.OwnersAddress</td>
+            <td>
+                <div>
+                    <button onclick="window.location.href='/Doge/Edit?Name=@item.Name'">Редактировать</button>
+                    <button onclick="window.location.href='/Doge/Delete?Name=@item.Name'">Удалить</button>
+                </div>
+            </td>
+        </tr>
+    }
+    </table>

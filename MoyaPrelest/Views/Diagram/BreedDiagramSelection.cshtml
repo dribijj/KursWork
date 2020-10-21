@@ -1,0 +1,13 @@
+﻿@model List<string>
+<form method="post">
+    <select name="SelectedBreed">
+        <option selected disabled>Выберите породу:</option>
+        @{
+            foreach (string t in Model)
+            {
+                <option value="@t">@t</option>
+            }
+        }
+    </select>
+    <input type="submit" value="Показать" />
+</form>
